@@ -91,6 +91,7 @@
 
   svg {
     fill: var(--header-footer-white);
+    transition: fill 400ms;
   }
 
   &:hover {
