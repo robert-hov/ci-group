@@ -5,6 +5,9 @@
   padding-top: 4.687rem;
   padding-bottom: 3.187rem;
 
+  background-color: var(--section-bg-white);
+  transition: background-color 400ms;
+
   @media (max-width: $med) {
     padding-top: 3rem;
     padding-bottom: 5.937rem;
@@ -21,7 +24,7 @@
 .projectText {
   margin-top: 0;
 
-  color: var(--primary-sixth);
+  color: var(--section-text-black);
 
   font-family: var(--secondary-font);
   font-size: 1.25rem;
@@ -45,14 +48,15 @@
 
 .projectTitle {
   max-width: 53rem;
-  @include section-title(var(--primary-sixth), 4.062rem);
+  @include section-title(var(--section-text-black), 4.062rem);
+  transition: color 400ms;
 
   @media (max-width: $med) {
-    @include section-title(var(--primary-sixth), 4.562rem);
+    @include section-title(var(--section-text-black), 4.562rem);
   }
 
   @media (max-width: $small) {
-    @include section-title(var(--primary-sixth), 2.937rem);
+    @include section-title(var(--section-text-black), 2.937rem);
   }
 }
 
@@ -143,11 +147,20 @@
   img {
     max-width: 100%;
     max-height: 100%;
+    transition: invert 400ms;
   }
 
   @media (max-width: $med) {
     width: 52.7%;
     margin-bottom: 3.562rem;
+  }
+}
+
+body[theme="dark"] {
+  .projectAboutLogo {
+    img {
+      filter: invert(1);
+    }
   }
 }
 

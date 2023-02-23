@@ -8,7 +8,7 @@ import {startsWith} from "lodash";
 import SuccessPopup from "@/components/Popups/Success";
 
 
-const Mail = ({bgColor = 'var(--primary)'}) => {
+const Mail = ({bgColor = 'var(--header-cream)'}) => {
     const form = useRef();
     const [name, setName] = useState('')
     const [email, setEmail] = useState('')

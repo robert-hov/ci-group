@@ -10,8 +10,8 @@
   padding-top: 5.625rem;
   padding-bottom: 5.625rem;
 
-  background-color: var(--primary);
-
+  background-color: var(--section-bg-white);
+  transition: background-color 400ms;
   @media (max-width: $med) {
     padding-top: 3.375rem;
     padding-bottom: 4.875rem;
@@ -38,20 +38,21 @@
 }
 
 .aboutTitle {
-  @include section-title(var(--primary-third), 2.75rem);
-
+  @include section-title(var(--section-text-black), 2.75rem);
+  transition: color 400ms;
   @media (max-width: $med) {
-    @include section-title(var(--primary-third), 3.312rem);
+    @include section-title(var(--section-text-black), 3.312rem);
   }
 
   @media (max-width: $small) {
-    @include section-title(var(--primary-third), 1.562rem);
+    @include section-title(var(--section-text-black), 1.562rem);
     text-align: center;
   }
 }
 
 .aboutDesc {
-  color: var(--primary-third);
+  color: var(--section-text-black);
+  transition: color 400ms;
 
   @extend %body-1;
 }

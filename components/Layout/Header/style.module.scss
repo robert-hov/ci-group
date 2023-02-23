@@ -22,12 +22,14 @@
   }
 
   &.up {
-    background-color: white;
+    background-color: var(--header-cream);
     box-shadow: 0 1px 1px rgb(0 0 0 / 10%);
 
     .headerLogo svg {
-      fill: var(--primary-forth);
+      fill: var(--header-fix);
     }
+
+
 
     .hamburgerIcon {
       .line {
@@ -88,7 +90,7 @@
   }
 
   svg {
-    fill: var(--primary);
+    fill: var(--header-footer-white);
   }
 
   &:hover {

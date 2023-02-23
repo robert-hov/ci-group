@@ -5,7 +5,8 @@
 .advantages {
   padding-top: 1.875rem;
   padding-bottom: 2.593rem;
-  background-color: var(--primary);
+  background-color: var(--section-bg-white);
+  transition: background-color 400ms;
 
   @media (max-width: $med) {
     padding-top: 1.937rem;
@@ -22,12 +23,13 @@
 }
 
 .advantagesTitle {
-  @include section-title(var(--primary-sixth), 6.25rem);
+  @include section-title(var(--section-text-black), 6.25rem);
+  transition: color 400ms;
   @media (max-width: $med) {
-    @include section-title(var(--primary-sixth), 2.281rem);
+    @include section-title(var(--section-text-black), 2.281rem);
   }
   @media (max-width: $small) {
-    @include section-title(var(--primary-sixth), 1.875rem);
+    @include section-title(var(--section-text-black), 1.875rem);
   }
 }
 
@@ -87,8 +89,8 @@ html[lang="rus"] {
 }
 
 .advantagesText {
-  color: var(--primary-sixth);
-
+  color: var(--section-text-black);
+  transition: color 400ms;
   @extend %body-2;
 
   @media(max-width: 610px) {

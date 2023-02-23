@@ -31,7 +31,7 @@ export default function Home({lang}) {
             <Advantages/>
             <Services/>
             <Partners/>
-            <Mail/>
+            <Mail bgColor={'var(--section-bg-cream)'}/>
         </>
 
     </>

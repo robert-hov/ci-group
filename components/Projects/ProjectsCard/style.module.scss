@@ -46,12 +46,12 @@
 
 .projectCardTitle {
   max-width: 53.75rem;
-  @include section-title(var(--primary-sixth), 2.562rem);
+  @include section-title(var(--section-text-black), 2.562rem);
 
   @media (max-width: $med) {
     padding-right: 1rem;
     padding-left: 1em;
-    @include section-title(var(--primary-sixth), 2rem);
+    @include section-title(var(--section-text-black), 2rem);
   }
 }
 

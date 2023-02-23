@@ -33,15 +33,51 @@ html {
   --primary-tenth: rgba(249, 249, 248, 1);
   --primary-eleventh: rgba(241, 241, 239, 1);
 
+  --header-footer-white: rgba(255, 255, 255, 1);
+  --header-footer-black: rgba(27, 26, 26, 1);
+  --header-cream: rgba(255, 255, 255, 1);
+  --header-cream-hover: rgba(255, 255, 255, 1);
+  --header-fix: rgba(200, 196, 188, 1);
+
+  --hero-black: rgba(27, 26, 26, 1);
+
+  --section-bg-white: rgba(255, 255, 255, 1);
+  --section-bg-cream: rgba(236, 234, 230, 1);
+  --section-text-black: rgba(0, 0, 0, 1);
+
+  --service-icons: rgba(200, 196, 188, 1);
+
   --primary-font: gotham, "Helvetica Neue", sans-serif;
   --primary-font-narrow: "Gotham Narrow", sans-serif;
   --secondary-font: montserrat, sans-serif;
   --primary-font-helvetica: "Helvetica Neue", sans-serif;
 }
 
+body[theme="dark"] {
+  --header-footer-white: rgba(255, 255, 255, 1);
+  --header-footer-black: rgba(27, 26, 26, 1);
+  --header-cream: rgb(198 195 190);
+  --header-cream-hover: rgba(236, 234, 230, 1);
+  --header-fix: rgba(0, 0, 0, 1);
+
+  --hero-black: rgb(16, 15, 15);
+
+  --section-bg-white: rgba(27, 26, 26, 1);
+  --section-bg-cream: rgb(198 195 190);
+  --section-text-black: rgba(255, 255, 255, 1);
+
+  --service-icons: rgba(27, 26, 26, 1);
+
+
+  //--primary: rgba(0, 0, 0, 1);
+  //
+  //--primary-sixth: rgba(255, 255, 255, 1);
+}
+
 html[lang="arm"] {
   --primary-font: montserrat, sans-serif;
   --primary-font-helvetica: montserrat, sans-serif;
+
 }
 
 body {

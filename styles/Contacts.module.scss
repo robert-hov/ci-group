@@ -5,6 +5,9 @@
   padding-top: 3.312rem;
   padding-bottom: 10.187rem;
 
+  background-color: var(--section-bg-white);
+  transition: background-color 400ms;
+
   @media (max-width: $med) {
     padding-bottom: 2.125rem;
   }
@@ -76,7 +79,7 @@
 }
 
 .contactCardTitle {
-  @include section-title(var(--primary-sixth), 1.625rem, flex-start);
+  @include section-title(var(--section-text-black), 1.625rem, flex-start);
 
   span {
     text-align: left;
@@ -86,7 +89,8 @@
 .contactCardText {
   margin-bottom: 1.187rem;
 
-  color: var(--primary-font-helvetica);
+  color: var(--section-text-black);
+  transition: color 400ms;
 
   font-family: var(--primary-font);
   font-size: 1.062rem;
@@ -100,7 +104,7 @@
   ul {
     li {
       svg {
-        fill: var(--primary-sixth);
+        fill: var(--section-text-black);
       }
     }
   }
@@ -109,7 +113,7 @@
 .contactMap {
   position: relative;
   width: 60.153%;
-  background-color: var(--primary-fifth);
+  background-color: var(--section-bg-white);
 
   &::before {
     content: '';

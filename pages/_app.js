@@ -2,7 +2,7 @@ import '@/styles/globals.scss'
 import Layout from "@/components/Layout";
 import Svg from "@/components/Svg";
 import Router, {router} from "next/router";
-import {useEffect} from "react";
+import {useEffect, useState} from "react";
 
 function App({Component, pageProps}) {
     useEffect(() => {
@@ -13,6 +13,28 @@ function App({Component, pageProps}) {
         }
         Router.push({pathname: router.pathname, query: router.query}, router.asPath, {locale});
     }, [])
+
+    const [theme, setTheme] = useState('');
+    useEffect(() => {
+        console.log('asadassss')
+
+        const localTheme = localStorage.getItem('theme')
+        if (localTheme) {
+            console.log('assss')
+            setTheme(localTheme)
+        } else {
+            if (window.matchMedia("(prefers-color-scheme:dark)").matches) {
+                console.log('amenaxore')
+
+                setTheme('dark')
+            } else {
+                setTheme('light')
+            }
+        }
+
+        console.log(theme)
+        document.body.setAttribute('theme', theme)
+    }, [theme])
     return (
         <>
                 <Svg/>

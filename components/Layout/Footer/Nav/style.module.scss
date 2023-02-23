@@ -24,7 +24,7 @@
 .navLink {
   position: relative;
 
-  color: var(--primary);
+  color: var(--header-footer-white);
 
   font-size: 0.875rem;
   font-weight: 400;
@@ -33,7 +33,7 @@
   text-transform: uppercase;
   letter-spacing: 3px;
 
-  @include nav-links(var(--primary));
+  @include nav-links(var(--header-footer-white));
 
   @media (max-width: variables.$med) {
     font-size: 0.75rem;

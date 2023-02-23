@@ -4,7 +4,8 @@
 .services {
   padding-top: 3rem;
   padding-bottom: 7rem;
-  background-color: var(--primary-fifth);
+  background-color: var(--section-bg-cream);
+  transition: background-color 400ms;
 
   @media (max-width: $med) {
     padding-top: 1.125rem;
@@ -26,6 +27,7 @@
 
 .servicesTitle {
   @include section-title(var(--primary-sixth), 2.812rem);
+  transition: color 400ms;
 
   @media (max-width: $med) {
     @include section-title(var(--primary-sixth), 2.843rem);

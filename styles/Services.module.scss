@@ -2,6 +2,8 @@
 @import "./styles/theme/extends";
 
 .service {
+  background-color: var(--section-bg-white);
+  transition: background-color 400ms;
   :global .page-container {
     padding: 0;
   }
@@ -10,6 +12,7 @@
 .serviceContainer {
   padding-top: 6rem;
   padding-bottom: 6rem;
+
 
   @media (max-width: $med) {
     padding-bottom: 2.312rem;
@@ -27,7 +30,7 @@
 }
 
 .serviceCardItem {
-  background-color: var(--primary-tenth);
+  background-color: var(--header-cream);
 
   &:not(:last-child) {
     margin-bottom: 0.625rem;

@@ -2,6 +2,8 @@
 
 .project {
   padding-top: 4.375rem;
+  background-color: var(--section-bg-white);
+  transition: background-color 400ms;
 
   @media (max-width: $med) {
     padding-top: 2rem;
