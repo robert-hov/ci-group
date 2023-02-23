@@ -1,0 +1,42 @@
+@import "../../styles/theme/variables";
+@import "../../styles/theme/mixins";
+
+.buttonSecondary {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+
+  background-color: var(--primary-third-80);
+  transition: background-color 0.75s cubic-bezier(0.4, 0, 0.2, 1);
+  @include btn-link(var(--primary));
+  text-decoration: none;
+
+  @media (min-width: $large) {
+    &:hover {
+      background-color: var(--primary-third);
+    }
+  }
+
+  @media (max-width: $med) {
+    background-color: var(--primary);
+    box-shadow: 0 1px 1px rgb(0 0 0 / 10%);
+    @include btn-link(var(--primary-sixth));
+    &.mobileBlack {
+      background-color: var(--primary-third-80);
+      @include btn-link(var(--primary));
+    }
+  }
+}
+
+.mobileBlack {
+}
+
+.buttonSecondaryText {
+  position: relative;
+
+  font-family: var(--primary-font);
+  font-size: 0.875rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.064em;
+}

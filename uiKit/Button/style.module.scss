@@ -1,0 +1,29 @@
+@import "../../styles/theme/mixins.scss";
+
+.btn {
+  @include btn-animation;
+  // border: none;
+  display: inline-block;
+  border: none;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.5;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 4.6px;
+  background-color: transparent;
+
+  &_black {
+    @include btn-animation(var(--primary-sixth))
+  }
+}
+
+.btn:disabled {
+  opacity: 0.4;
+}
+
+.btn_black {
+}
+
+.btnText {
+}

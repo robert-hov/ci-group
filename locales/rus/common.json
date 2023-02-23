@@ -1,0 +1,85 @@
+{
+  "hero": {
+    "home": {
+      "title": "Capital invest group",
+      "description": "YOUR guaranteed investmentS"
+    },
+    "services": "сервисы",
+    "contacts": "Контакты",
+    "career": "вакансии",
+    "projects": "проекты"
+  },
+  "nav": {
+    "home": "главная",
+    "projects": "проекты",
+    "services": "сервисы",
+    "career": "вакансии",
+    "contacts": "Контакты"
+  },
+  "about": {
+    "title": "Capital invest group",
+    "description": "CAPITAL INVEST GROUP работает в сфере управления недвижимостью и бизнесом.\n  в 4 областях РА (Ереван, Тавуш, Арарат, Котайк)"
+  },
+  "advantage": {
+    "title": "OUR ADVANTAGES",
+    "texts": {
+      "text1": "профессиональная команда",
+      "text2": "стабильное положение на рынке",
+      "text3": "конкурентоспособная ценовая политика."
+    }
+  },
+  "services": {
+    "title": "SERVICES",
+    "description": "Capital invest group offers you such services as",
+    "items": {
+      "law": "Юридические услуги",
+      "percent": "Организация и выполнение продаж",
+      "rocket": "Управление проектом.",
+      "research": "Исследование и анализ рынка",
+      "ad": "Маркетинг",
+      "finance": "Финансовый менеджмент",
+      "books": "Организация и обеспечение документооборота",
+      "buildings": "Создание, анализ и реализация инвестиционных планов"
+    }
+  },
+  "partners": "Наши партнеры",
+  "mail": {
+    "title": "Обратная связь",
+    "placeholders": {
+      "name": "Name*",
+      "number": "Contacts*",
+      "email": "Email*"
+    }
+  },
+  "buttons": {
+    "primary": "send",
+    "secondary": "see more",
+    "maps": "Open on maps"
+  },
+  "projects": {
+    "tsaghkadzor": {
+      "title": "Tsaghkadzor hills aparts and villas",
+      "desc": "Tsaghkadzor Hills is a  multifunctional residential complex, composed of 2 multifunctional buildings, 60 private houses, 3 three-story multifunctional buildings and 4 four-story multifunctional buildings.",
+      "about": {
+        "item1": "Outdoor swimming pool",
+        "item2": "Indoor swimming pool",
+        "item3": "Cafes",
+        "item4": "Banquet hall",
+        "item5": "number of other entertainment and luxury sites."
+      },
+      "address": "Our address: RA, Gegharkunik Marz, Tsaghkadzor, Saralanji 1."
+    },
+    "dilijan": {
+      "title": "dILIJAN HILLS",
+      "desc": "DILIJAN HILLS residential area offers two storey  detached houses. You can buy the apartments both  with renovated  kitchen furniture and without. Total area: 220-292 square meters",
+      "about": {
+        "item1": "Outdoor swimming pool",
+        "item2": "Indoor swimming pool",
+        "item3": "Cafes",
+        "item4": "Banquet hall",
+        "item5": "number of other entertainment and luxury sites."
+      },
+      "address": "Our address: RA, Tavush Marz, Dilijan, Shahumyan str. 17b:"
+    }
+  }
+}

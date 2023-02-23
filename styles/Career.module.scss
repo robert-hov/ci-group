@@ -1,0 +1,45 @@
+@import "./theme/variables.scss";
+@import "./theme/extends.scss";
+@import "./theme/mixins.scss";
+
+.career {
+  padding-top: 3.5rem;
+  padding-bottom: 2.75rem;
+}
+
+.careerContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.careerTitle {
+  @include section-title(var(--primary-sixth), 3rem)
+}
+
+.careerForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 43.076%;
+  min-width: 34.375rem;
+
+  @media (max-width: $med) {
+    width: 81.871%;
+    min-width: unset;
+  }
+
+  @media (max-width: $small) {
+    width: 100%;
+  }
+}
+
+.careerInputContainer {
+  width: 100%;
+  margin-bottom: 2.875rem;
+}
+
+.careerInput {
+  @extend %input;
+}

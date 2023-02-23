@@ -1,0 +1,182 @@
+@font-face {
+  font-family: "Helvetica Neue";
+  src: url("../../public/fonts/HelveticaNeueCyr-Thin.woff2") format("woff2"),
+  url("../../public/fonts/HelveticaNeueCyr-Thin.woff") format("woff");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Helvetica Neue";
+  src: url("../../public/fonts/HelveticaNeueCyr-UltraLight.woff2") format("woff2"),
+  url("../../public/fonts/HelveticaNeueCyr-UltraLight.woff") format("woff");
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Helvetica Neue";
+  src: url("../../public/fonts/HelveticaNeueCyr-Light.woff2") format("woff2"),
+  url("../../public/fonts/HelveticaNeueCyr-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Helvetica Neue";
+  src: url("../../public/fonts/HelveticaNeueCyr-Roman.woff2") format("woff2"),
+  url("../../public/fonts/HelveticaNeueCyr-Roman.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Helvetica Neue";
+  src: url("../../public/fonts/HelveticaNeueCyr-Medium.woff2") format("woff2"),
+  url("../../public/fonts/HelveticaNeueCyr-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Helvetica Neue";
+  src: url("../../public/fonts/HelveticaNeueCyr-Bold.woff2") format("woff2"),
+  url("../../public/fonts/HelveticaNeueCyr-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Helvetica Neue";
+  src: url("../../public/fonts/HelveticaNeueBoldCondensed.woff2") format("woff2"),
+  url("../../public/fonts/HelveticaNeueBoldCondensed.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Helvetica Neue";
+  src: url("../../public/fonts/HelveticaNeueCyr-Heavy.woff2") format("woff2"),
+  url("../../public/fonts/HelveticaNeueCyr-Heavy.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Helvetica Neue";
+  src: url("../../public/fonts/HelveticaNeueCyr-Black.woff2") format("woff2"),
+  url("../../public/fonts/HelveticaNeueCyr-Black.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Helvetica Neue";
+  src: url("../../public/fonts/HelveticaNeueBlackCondensed.woff2") format("woff2"),
+  url("../../public/fonts/HelveticaNeueBlackCondensed.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: gotham;
+  src: url("../../public/fonts/Gotham-ExtraLight.woff");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: gotham;
+  src: url("../../public/fonts/Gotham-Light.woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: gotham;
+  src: url("../../public/fonts/Gotham-Book.woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gotham Narrow";
+  src: url("../../public/fonts/GothamNarrow-Book.woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gotham Narrow";
+  src: url("../../public/fonts/GothamNarrow-BookItalic.woff");
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: gotham;
+  src: url("../../public/fonts/Gotham-Bold.woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: montserrat;
+  src: url(../../public/fonts/Montserratarm-Regular.otf);
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: montserrat;
+  src: url(../../public/fonts/Montserratarm-Thin.otf);
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: montserrat;
+  src: url(../../public/fonts/Montserratarm-ExtraLight.otf);
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: montserrat;
+  src: url(../../public/fonts/Montserratarm-Light.otf);
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: montserrat;
+  src: url(../../public/fonts/Montserratarm-Medium.otf);
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: montserrat;
+  src: url(../../public/fonts/Montserratarm-SemiBold.otf);
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: montserrat;
+  src: url(../../public/fonts/Montserratarm-Bold.otf);
+  font-weight: 700;
+  font-style: normal;
+}

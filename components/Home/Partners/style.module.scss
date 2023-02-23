@@ -1,0 +1,45 @@
+@use "../../../styles/theme/variables";
+@import "../../../styles/theme/mixins";
+
+.partners {
+  padding-top: 1.75rem;
+  padding-bottom: 7.062rem;
+
+  background-color: var(--primary-second);
+
+
+  @media (max-width: variables.$med) {
+    padding-top: 1.125rem;
+    padding-bottom: 7.437rem;
+
+    :global .page-container {
+      padding: 0 0 0 1.875rem;
+    }
+  }
+
+  @media (max-width: variables.$small) {
+    padding-top: 2.562rem;
+    padding-bottom: 2.875rem;
+
+    :global .page-container {
+      padding: 0;
+    }
+  }
+}
+
+.partnersContainer {
+}
+
+
+.partnersTitle {
+  @include section-title(var(--primary), 5.375rem);
+
+  @media (max-width: variables.$med) {
+    @include section-title(var(--primary), 3.968rem);
+  }
+
+  @media (max-width: variables.$small) {
+    @include section-title(var(--primary), 2.437rem);
+    margin-bottom: 3.437rem;
+  }
+}

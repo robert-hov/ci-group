@@ -1,0 +1,258 @@
+@import "./variables";
+@import "./extends";
+
+@mixin nav-links($color) {
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -0.5em;
+    left: 0;
+    width: 1.5em;
+    height: 1.5px;
+    background-color: $color;
+    transform: translateX(-108%);
+    opacity: 0;
+    transition: opacity 0.6s ease, transform 0.4s ease-in-out;
+  }
+
+  @media (min-width: $med) {
+    &:hover {
+      &::after {
+        transform: translateX(0);
+        opacity: 1;
+        transition: opacity 0.6s ease, transform 0.4s ease-in-out;
+      }
+    }
+  }
+}
+
+@mixin btn-animation($color: var(--primary)) {
+  position: relative;
+  color: $color;
+  margin-left: 4.2em;
+
+  &::after {
+    content: "";
+    top: 0;
+    right: 0;
+    height: 1px;
+    width: 100%;
+    background-color: $color;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -2.4em;
+    height: 1px;
+    width: 3em;
+    background-color: $color;
+    transition: all 0.25s ease;
+  }
+
+  .btnText {
+    position: relative;
+    display: block;
+    padding: 0.459em 2.29em;
+    line-height: 1.5;
+    transition: transform 0.5s ease;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      height: 1px;
+      width: 0;
+      background-color: $color;
+    }
+
+    &::before {
+      top: 0;
+      left: 0;
+      transition: width 0.15s 0.45s $ease-cb3; // 4th
+    }
+
+    &::after {
+      bottom: 0;
+      right: 0;
+      transition: width 0.15s 0.15s $ease-cb3; // 2nd
+    }
+  }
+
+  .btnText span {
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      height: 0;
+      width: 1px;
+      background-color: $color;
+      transition: all 0.2s cubic-bezier(0.2, 0.3, 0.25, 0.9);
+    }
+
+    &::before {
+      left: 0;
+      bottom: 0;
+      transition: height 0.15s 0 $ease-cb3; // 1st
+    }
+
+    &::after {
+      right: 0;
+      top: 0;
+      transition: height 0.15s 0.3s $ease-cb3; // 3rd
+    }
+  }
+
+  &:hover,
+  a:hover & {
+    @media (min-width: $large) {
+      cursor: pointer;
+
+      &::before {
+        width: 0;
+        transition: all 0.4s ease;
+      }
+
+      .btnText {
+        transform: translateX(-2.2em);
+        transition: transform 0.5s ease, width 1s ease;
+
+        // Build Top and bottom borders via width
+        &::before {
+          width: 100%;
+          max-width: 100%;
+          transition: width 0.15s $ease-cb3; // 1st
+        }
+
+        &::after {
+          width: 100%;
+          transition: width 0.15s 0.3s $ease-cb3; // 3rd
+        }
+      }
+      // Build Left and Right borders via height;
+      .btnText span {
+        &::before {
+          left: 0;
+          height: 100%;
+          transition: height 0.15s 0.45s $ease-cb3; // 4th
+        }
+
+        &::after {
+          right: 0;
+          height: 100%;
+          transition: height 0.15s 0.15s $ease-cb3; // 2nd
+        }
+      }
+    }
+  }
+}
+
+@mixin nth-ani-delay($delay_items: 7, $delay_time: 0.2s) {
+  @for $i from 1 through $delay_items {
+    &:nth-child(#{$i}) {
+      animation-delay: $delay_time * $i;
+    }
+  }
+}
+
+@mixin btn-link($color: var(--primary-third)) {
+  > span {
+    color: $color;
+
+    > span {
+      display: inline-block;
+      transform: translateX(1.9em);
+      transition: transform 0.4s ease;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: -3em;
+      height: 1px;
+      width: 3.5em;
+      background-color: $color;
+      transition: all 0.25s ease;
+    }
+
+    &:hover,
+    a:hover & {
+      @media (min-width: $large) {
+      }
+    }
+  }
+
+  @media (min-width: $large) {
+
+    &:hover {
+      > span::before {
+        width: 0;
+        transition: 0.4s;
+      }
+
+      > span > span {
+        transform: translateX(0);
+        transition: transform 0.4s ease;
+      }
+    }
+  }
+}
+
+@mixin section-title($color: var(--primary-sixth), $mb: 1rem, $alignItems: center) {
+  display: flex;
+  flex-direction: column;
+  align-items: $alignItems;
+
+  margin-top: 0;
+  margin-bottom: $mb;
+
+  span {
+    font-family: var(--primary-font);
+    font-size: 2rem;
+    font-weight: 300;
+    line-height: 1.5;
+    text-transform: uppercase;
+    letter-spacing: 0.125em;
+    text-align: center;
+
+
+    @media (max-width: $med) {
+      font-size: 1.75rem;
+      line-height: 1.714;
+      letter-spacing: 0.142em;
+    }
+
+    @media (max-width: $small) {
+      font-size: 1.25rem;
+      letter-spacing: 0.2em;
+    }
+    color: $color;
+    margin-bottom: 1.687rem;
+  }
+  div {
+    width: 3.75rem;
+    border-top: 1px solid $color;
+  }
+
+  @media (max-width: $med) {
+    span {
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  @media (max-width: $small) {
+    span {
+      margin-bottom: 0.812rem;
+    }
+  }
+}
+
+@mixin nth-trans-delay($delay_items: 7, $delay_time: 0.2s) {
+  @for $i from 1 through $delay_items {
+    &:nth-child(#{$i}) {
+      transition-delay: ($delay_time * $i);
+    }
+  }
+}

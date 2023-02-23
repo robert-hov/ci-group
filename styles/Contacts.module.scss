@@ -1,0 +1,175 @@
+@import "./theme/variables";
+@import "./theme/mixins";
+
+.contacts {
+  padding-top: 3.312rem;
+  padding-bottom: 10.187rem;
+
+  @media (max-width: $med) {
+    padding-bottom: 2.125rem;
+  }
+}
+
+.contactContent {
+  margin-left: 1.312rem;
+}
+
+.contactContainer {
+  display: flex;
+  justify-content: space-between;
+
+  @media (max-width: $med) {
+    flex-direction: column;
+  }
+}
+
+.contactCards {
+  @media (max-width: $med) {
+    display: flex;
+    margin-bottom: 6.25rem;
+  }
+
+  @media (max-width: $small) {
+    flex-direction: column;
+  }
+}
+
+.contactCard {
+  max-width: 18.625rem;
+
+  &:not(:last-child) {
+    margin-bottom: 5.062rem;
+  }
+
+  @media (max-width: $med) {
+    margin-bottom: 0;
+
+    &:not(:last-child) {
+      margin-bottom: 0;
+    }
+
+    &_address {
+      max-width: 43.421%;
+      margin-right: auto;
+    }
+
+    &_smm {
+      margin-right: 3.437rem;
+    }
+  }
+
+  @media (max-width: $med) {
+    &:not(:last-child) {
+      margin-bottom: 4rem;
+    }
+
+    &_address,
+    &_smm {
+      width: 100%;
+      max-width: unset;
+    }
+  }
+}
+
+.contactCard_address,
+.contactCard_smm {
+}
+
+.contactCardTitle {
+  @include section-title(var(--primary-sixth), 1.625rem, flex-start);
+
+  span {
+    text-align: left;
+  }
+}
+
+.contactCardText {
+  margin-bottom: 1.187rem;
+
+  color: var(--primary-font-helvetica);
+
+  font-family: var(--primary-font);
+  font-size: 1.062rem;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+
+.contactCardSmm {
+  ul {
+    li {
+      svg {
+        fill: var(--primary-sixth);
+      }
+    }
+  }
+}
+
+.contactMap {
+  position: relative;
+  width: 60.153%;
+  background-color: var(--primary-fifth);
+
+  &::before {
+    content: '';
+    display: block;
+    padding-top: 60.869%;
+  }
+
+  > iframe {
+    position: absolute;
+    inset: 0;
+    height: 100%;
+    width: 100%;
+  }
+
+  @media (max-width: $med) {
+    width: 100%;
+  }
+}
+
+.contactSmm {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.contactSmmItem {
+  &:not(:last-child) {
+    margin-right: 1.25rem;
+
+    @media (max-width: $small) {
+      margin-right: 0.968rem;
+    }
+  }
+}
+
+.contactSmmLink {
+  position: relative;
+  display: block;
+  width: 2.187rem;
+  opacity: 0.5;
+  transition: opacity 500ms ease;
+
+  text-decoration: none;
+
+  &::before {
+    content: '';
+    display: block;
+    padding-top: 100%;
+  }
+
+  svg {
+    fill: var(--primary-fifth);
+  }
+
+  &:hover {
+    opacity: 1;
+  }
+
+  @media (max-width: $small) {
+    width: 1.968rem;
+  }
+}

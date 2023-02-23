@@ -1,0 +1,154 @@
+@import "../../../../styles/theme/variables";
+@import "../../../../styles/theme/mixins";
+
+@keyframes language-dropdown {
+  0% {
+    display: block;
+  }
+
+  99% {
+    display: block;
+  }
+
+  100% {
+    display: none;
+  }
+}
+
+.language {
+  position: relative;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+
+  &.up .languageIcon {
+    svg {
+      stroke: var(--primary-forth);
+    }
+  }
+
+  &.up .text {
+    color: var(--primary-forth);
+  }
+
+  &.up .dropdown {
+    background-color: var(--primary);
+
+    .dropdownBtn {
+      color: var(--primary-forth);
+
+      @include nav-links(var(--primary-forth))
+    }
+  }
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  padding: 0;
+
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.languageIcon {
+  position: relative;
+  width: 1.625rem;
+  margin-right: 0.605rem;
+
+  &::before {
+    content: "";
+    display: block;
+    padding-top: 100%;
+  }
+
+  svg {
+    stroke: var(--primary);
+  }
+
+  @media (max-width: $med) {
+    width: 1.979rem;
+
+    svg {
+      stroke: var(--primary-eighth)
+    }
+  }
+}
+
+.text {
+  display: block;
+  width: 2rem;
+
+  color: var(--primary);
+
+  font-family: var(--primary-font);
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.22;
+  text-transform: uppercase;
+  text-align: start;
+
+  @media (max-width: $med) {
+    color: var(--primary-eighth);
+
+    font-size: 1.25rem;
+    font-weight: 300;
+  }
+}
+
+.dropdown {
+  box-sizing: content-box;
+  transition: opacity 640ms cubic-bezier(1, 0.01, 0.94, -0.14);
+  position: absolute;
+  padding: 0 1rem 0.5rem;
+  top: calc(100% + 0.625rem);
+  right: -1rem;
+
+  flex-direction: column;
+  align-items: flex-start;
+  width: 2rem;
+
+  &::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  @media (max-width: $med) {
+    right: -2rem;
+    width: 3rem;
+  }
+}
+
+.dropdownBtn {
+  position: relative;
+  display: block;
+  padding: 0;
+  margin-bottom: 1rem;
+  width: 100%;
+
+  color: var(--primary);
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+
+  font-family: var(--primary-font);
+  font-size: 0.875rem;
+  font-weight: 100;
+  line-height: 1.209;
+  text-align: start;
+  text-transform: uppercase;
+  text-decoration: none;
+  @include nav-links(var(--primary));
+
+  @media (max-width: $med) {
+    color: var(--primary-eighth);
+    @include nav-links(var(--primary-eighth));
+
+    font-size: 1.25rem;
+
+  }
+}

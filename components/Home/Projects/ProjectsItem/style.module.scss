@@ -1,0 +1,150 @@
+@import "../../../../styles/theme/variables";
+@import "../../../../styles/theme/mixins";
+
+@keyframes letter-fade-in {
+  0% {
+    opacity: 0;
+    text-shadow: 0px 0px 1px rgba(255, 255, 255, 0.1);
+  }
+  66% {
+    opacity: 0.6;
+    text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
+  }
+  77% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    text-shadow: 0px 0px 20px rgba(255, 255, 255, 0);
+  }
+}
+
+.item {
+  position: relative;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+
+  padding-top: 8.625rem;
+  padding-bottom: 13.625rem;
+
+  background-color: var(--primary-sixth);
+
+  text-decoration: none;
+
+  @media (min-width: $med) {
+    &:hover {
+      .itemImg {
+        opacity: 0.3;
+        transform: scale(1.2);
+        // opacity: 0.3;
+        transition: transform 15s, opacity 1s ease-in-out;
+      }
+
+      .projects__item-opacity {
+        background-color: var(--primary-third-50);
+      }
+
+      .itemTitle span {
+        animation: letter-fade-in 0.7s 0s ease both;
+        @include nth-ani-delay(60, 0.04s);
+      }
+    }
+  }
+
+  @media (max-width: $med) {
+    width: 100%;
+    padding-top: 7.687rem;
+    padding-bottom: 7rem;
+
+    &:not(:last-child) {
+      margin-bottom: 0.562rem;
+    }
+  }
+
+  @media (max-width: $small) {
+    padding-top: 4.25rem;
+    padding-bottom: 6.125rem;
+
+    &:not(:last-child) {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.itemImg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+
+  opacity: 0.7;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 1;
+
+  transition: transform 5s, opacity 1s;
+}
+
+.itemOpacity {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+
+  background-color: var(--primary-third-20);
+  transition: all 500ms;
+  z-index: 2;
+}
+
+.itemContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 86.111%;
+  position: relative;
+  z-index: 10;
+
+  & > button {
+    @media (max-width: $med) {
+      display: none;
+    }
+  }
+}
+
+.itemTitle {
+  margin-top: 0;
+  margin-bottom: 2.187rem;
+
+  color: var(--primary);
+
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 1.5;
+  text-transform: uppercase;
+  text-align: center;
+
+  span {
+    letter-spacing: 0.425rem;
+  }
+
+  @media (max-width: $med) {
+    margin-bottom: 0;
+  }
+
+  @media (max-width: $med) {
+    font-size: 1.25rem;
+    line-height: 2.4;
+  }
+}

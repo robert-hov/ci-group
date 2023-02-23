@@ -1,0 +1,17 @@
+@import "./theme/variables";
+
+.project {
+  padding-top: 4.375rem;
+
+  @media (max-width: $med) {
+    padding-top: 2rem;
+    padding-bottom: 1.25rem;
+  }
+
+  :global .page-container {
+    padding: 0;
+  }
+}
+
+.projectContainer {
+}

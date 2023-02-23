@@ -1,0 +1,195 @@
+@import "../../../styles/theme/variables";
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 100;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 500ms;
+
+  &.down {
+    top: -6rem;
+  }
+
+  &.top {
+    background-color: transparent;
+  }
+
+  &.up {
+    background-color: white;
+    box-shadow: 0 1px 1px rgb(0 0 0 / 10%);
+
+    .headerLogo svg {
+      fill: var(--primary-forth);
+    }
+
+    .hamburgerIcon {
+      .line {
+        background-color: var(--primary-forth);
+
+        &::after,
+        &::before {
+          background-color: var(--primary-forth);
+        }
+      }
+    }
+  }
+
+  @media (max-width: $med) {
+    padding-top: 1.75rem;
+
+    &_active {
+      .headerLogo {
+        z-index: 100;
+
+        svg {
+          fill: var(--primary-sixth);
+        }
+      }
+    }
+  }
+
+  @media (max-width: $small) {
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+  }
+}
+
+.header_active {
+}
+
+
+.headerContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.headerLogo {
+  position: relative;
+  z-index: 100;
+  display: flex;
+  width: 2.687rem;
+  // transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 500ms;
+
+  &::before {
+    content: "";
+    display: block;
+    padding-top: 100%;
+  }
+
+  svg {
+    fill: var(--primary);
+  }
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  @media (max-width: $med) {
+    width: 4rem;
+  }
+
+  @media (max-width: $small) {
+    width: 2.437rem;
+  }
+}
+
+.hamburgerIcon {
+  position: relative;
+  display: none;
+
+  height: 2.187rem;
+  width: 4.625rem;
+  padding: 0;
+
+  background-color: transparent;
+  box-sizing: border-box;
+  border: none;
+  cursor: pointer;
+
+  &.active {
+    .line {
+      background-color: transparent !important;
+
+      &::before {
+        transform: rotate(-45deg);
+      }
+
+      &::after {
+        transform: rotate(45deg);
+      }
+
+      &::before,
+      &::after {
+        top: 0 !important;
+        background: rgba(153, 153, 153, 1);
+        zoom: 1;
+        z-index: 10;
+      }
+    }
+  }
+
+  @media (max-width: $med) {
+    display: flex;
+  }
+
+  @media (max-width: $small) {
+    height: 1rem;
+    width: 2.448rem;
+  }
+}
+
+.line {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  width: 100%;
+  height: 1px;
+  background: #fff;
+  -webkit-transition: background 0.4s ease-in-out;
+  transition: background 0.4s ease-in-out;
+
+  &::before,
+  &::after {
+    z-index: -1;
+    content: "";
+    position: absolute;
+    display: block;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 1px;
+    background: #fff;
+    -webkit-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+  }
+
+  &::before {
+    top: -15px;
+  }
+
+  &::after {
+    top: 15px;
+  }
+
+  @media (max-width: $small) {
+    &::before {
+      top: -8px;
+    }
+
+    &::after {
+      top: 8px;
+    }
+  }
+}

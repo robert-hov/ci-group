@@ -1,0 +1,157 @@
+@import "../../../../styles/theme/variables";
+@import "../../../../styles/theme/extends";
+
+.servicesSwiperContainer {
+  position: relative;
+}
+
+.servicesSwiper:global.swiper {
+  :global .swiper-pagination {
+    display: none;
+    bottom: unset;
+    top: 100%;
+    transform: translateY(-100%);
+
+    :global .swiper-pagination-bullet-active {
+      background-color: var(--primary-sixth);
+    }
+  }
+
+  @media (max-width: $large) {
+    padding: 0 0 3rem;
+
+    :global .swiper-pagination {
+      display: block;
+    }
+  }
+
+  @media (max-width: $small) {
+    padding: 0 0 3rem 0.937rem;
+  }
+}
+
+.servicesSlide {
+}
+
+.servicesSwiperButtonNext,
+.servicesSwiperButtonPrev {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 2.25rem;
+  z-index: 100;
+  background-color: transparent;
+  border: none;
+  padding: 4rem 0;
+  cursor: pointer;
+
+  &.disabled {
+    display: none;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    padding-top: 91.666%;
+  }
+
+  svg {
+    fill: var(--primary-ninth);
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  @media (max-width: $large) {
+    display: none;
+  }
+}
+
+.disabled {
+}
+
+.servicesSwiperButtonNext {
+  left: 100%;
+}
+
+.servicesSwiperButtonPrev {
+  right: 100%;
+}
+
+.servicesSlideContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-align: center;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.servicesSlideImg {
+  position: relative;
+  width: 6.375rem;
+  border-radius: 100%;
+  margin-bottom: 2.687rem;
+  border: 1px solid var(--primary-ninth);
+
+  &::before {
+    content: "";
+    display: block;
+    padding-top: 100%;
+  }
+
+  svg {
+    fill: var(--primary-ninth);
+    max-width: 52.941% !important;
+  }
+
+  @media (max-width: $med) {
+    width: 3.825rem;
+    margin-bottom: 2.4rem;
+  }
+
+  @media (max-width: $small) {
+    width: 2.875rem;
+    margin-bottom: 1.5rem;
+  }
+
+}
+
+.servicesSlideTextContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.servicesSlideText {
+  display: block;
+  max-width: 32.5rem;
+
+  color: var(--primary-sixth);
+
+  //font-family: var(--primary-font);
+  //font-size: 1.25rem;
+  //font-weight: 300;
+  //line-height: 2.4;
+  //letter-spacing: 4px;
+  //text-transform: uppercase;
+  @extend %heading-4;
+
+  @media (max-width: $med) {
+    font-size: 1rem;
+    line-height: 1.75;
+    letter-spacing: 0.06em;
+    text-align: center;
+  }
+
+  @media (max-width: $small) {
+    font-family: var(--secondary-font);
+    font-size: 0.937rem;
+    font-weight: 300;
+    line-height: 1.219;
+    text-transform: lowercase;
+    &::first-letter {
+      text-transform: capitalize;
+    }
+  }
+}

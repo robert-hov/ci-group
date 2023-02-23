@@ -1,0 +1,112 @@
+@import "./styles/theme/variables";
+@import "./styles/theme/extends";
+
+.service {
+  :global .page-container {
+    padding: 0;
+  }
+}
+
+.serviceContainer {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+
+  @media (max-width: $med) {
+    padding-bottom: 2.312rem;
+  }
+}
+
+.serviceCard {
+  padding: 0 1rem;
+
+  list-style-type: none;
+
+  @media (max-width: $med) {
+    padding: 0;
+  }
+}
+
+.serviceCardItem {
+  background-color: var(--primary-tenth);
+
+  &:not(:last-child) {
+    margin-bottom: 0.625rem;
+  }
+}
+
+.serviceCardItemContainer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 10.125rem;
+  padding: 2.062rem 12.539%;
+
+  @media (max-width: $small) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: unset;
+    padding: 2rem 1rem;
+  }
+}
+
+.serviceCardIcon {
+  position: absolute;
+  top: 50%;
+  left: 4.285%;
+  transform: translateY(-50%);
+  width: 8.095%;
+
+  border-radius: 50%;
+  background-color: var(--primary-eleventh);
+
+  &::before {
+    content: '';
+    display: block;
+    padding-top: 100%;
+  }
+
+  svg {
+    fill: var(--primary-ninth);
+    width: 42%;
+  }
+
+  @media (max-width: $small) {
+    position: relative;
+    transform: translateY(0);
+    width: 4rem;
+    margin-bottom: 1rem;
+    left: 0;
+    top: 0;
+  }
+}
+
+.serviceCardTitle {
+  margin-top: 0;
+  margin-bottom: 0;
+
+  color: var(--primary-sixth);
+
+  font-family: var(--primary-font);
+  font-size: 1.5rem;
+  font-weight: 300;
+  line-height: 2;
+  letter-spacing: 4px;
+  text-align: center;
+  text-transform: uppercase;
+
+  @media (max-width: $med) {
+    padding: 0 1rem;
+
+    font-size: 1.25rem;
+    line-height: 2.4;
+    letter-spacing: 6.4px;
+  }
+
+  @media (max-width: $small) {
+    font-size: 1rem;
+    letter-spacing: 4px;
+  }
+}
+

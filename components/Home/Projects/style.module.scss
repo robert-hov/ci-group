@@ -1,0 +1,14 @@
+@import "../../../styles/theme/variables";
+
+.projects {
+
+}
+
+.projectsContent {
+  display: flex;
+
+  @media (max-width: $med) {
+    flex-direction: column;
+  }
+}
+

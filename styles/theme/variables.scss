@@ -1,0 +1,28 @@
+//Media query sizes
+
+//352
+$xsmall: 22rem;
+
+//512
+$small: 32rem;
+
+//864
+$med: 54rem;
+
+//1040
+$large: 65rem;
+
+//1456
+$xlarge: 91rem;
+
+//1840
+$xxlarge: 115rem;
+
+//2080
+$xxxlarge: 130rem;
+
+// transitions
+
+$ease-cb: cubic-bezier(.77, 0, .175, 1);
+$ease-cb2: cubic-bezier(.19, 1, .22, 1);
+$ease-cb3: cubic-bezier(.4, 0, .2, 1);

@@ -1,0 +1,48 @@
+@use "../../../../styles/theme/variables";
+@import "../../../../styles/theme/mixins";
+
+.nav {
+  display: flex;
+  list-style-type: none;
+  margin-bottom: 2rem;
+
+  @media (max-width: variables.$med) {
+    flex-direction: column;
+  }
+}
+
+.navItem {
+  &:not(:last-child) {
+    margin-right: 4.375rem;
+    @media (max-width: variables.$med) {
+      margin-right: 0;
+      margin-bottom: 0.625rem;
+    }
+  }
+}
+
+.navLink {
+  position: relative;
+
+  color: var(--primary);
+
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.5;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+
+  @include nav-links(var(--primary));
+
+  @media (max-width: variables.$med) {
+    font-size: 0.75rem;
+    line-height: 1.75;
+    letter-spacing: 2px;
+  }
+
+  @media (max-width: variables.$small) {
+    font-size: 0.625rem;
+    line-height: 1.312;
+  }
+}
