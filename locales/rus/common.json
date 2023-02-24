@@ -28,6 +28,10 @@
       "text3": "конкурентоспособная ценовая политика."
     }
   },
+  "homeProjects": {
+    "tsaghkadzor": "Tsaghkadzor Hills",
+    "dilijan": "Dilijan Hills"
+  },
   "services": {
     "title": "SERVICES",
     "description": "Capital invest group offers you such services as",

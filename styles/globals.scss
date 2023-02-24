@@ -39,7 +39,8 @@ html {
   --header-cream-hover: rgba(255, 255, 255, 1);
   --header-fix: rgba(200, 196, 188, 1);
 
-  --hero-black: rgba(27, 26, 26, 1);
+  --hero-black: rgba(0, 0, 0, 1);
+
 
   --section-bg-white: rgba(255, 255, 255, 1);
   --section-bg-cream: rgba(236, 234, 230, 1);
@@ -60,7 +61,7 @@ body[theme="dark"] {
   --header-cream-hover: rgba(236, 234, 230, 1);
   --header-fix: rgba(0, 0, 0, 1);
 
-  --hero-black: rgb(16, 15, 15);
+  --hero-black: rgba(0, 0, 0, 0.8);
 
   --section-bg-white: rgba(27, 26, 26, 1);
   --section-bg-cream: rgb(198 195 190);

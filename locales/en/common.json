@@ -56,6 +56,10 @@
     "secondary": "see more",
     "maps": "Open on maps"
   },
+  "homeProjects": {
+    "tsaghkadzor": "Tsaghkadzor Hills",
+    "dilijan": "Dilijan Hills"
+  },
   "projects": {
     "tsaghkadzor": {
       "title": "Tsaghkadzor hills aparts and villas",

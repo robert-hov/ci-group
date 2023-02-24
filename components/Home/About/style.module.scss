@@ -56,3 +56,9 @@
 
   @extend %body-1;
 }
+
+html[lang="arm"] {
+  .aboutDesc {
+    text-transform: none;
+  }
+}

@@ -12,8 +12,8 @@ const Projects = () => {
     return (
         <div className={styles.projects}>
             <div className={styles.projectsContent}>
-                <ProjectsItem link="/projects/1" title="tsaghkadzor hills" img={tsaghkadzor}/>
-                <ProjectsItem link="/projects/2" title="Dilijan hills" img={dilijan}/>
+                <ProjectsItem link="/projects/1" title={t('homeProjects.tsaghkadzor')} img={tsaghkadzor}/>
+                <ProjectsItem link="/projects/2" title={t('homeProjects.dilijan')} img={dilijan}/>
             </div>
             <ButtonSecondary mobileBlack link="/projects" text={t('buttons.secondary')}/>
         </div>

@@ -65,7 +65,10 @@ export const projectsData = [
                 'projects.tsaghkadzor.about.item2',
                 'projects.tsaghkadzor.about.item3',
                 'projects.tsaghkadzor.about.item4',
-                'projects.tsaghkadzor.about.item5'
+                'projects.tsaghkadzor.about.item5',
+                'projects.tsaghkadzor.about.item6',
+                'projects.tsaghkadzor.about.item7',
+                'projects.tsaghkadzor.about.item8',
             ],
             address: "projects.tsaghkadzor.address",
             logo: tsaghkadzorLogo,
