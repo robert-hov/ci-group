@@ -17,7 +17,7 @@ const Mail = ({bgColor = 'var(--header-cream)'}) => {
     const [phoneNumber, setPhoneNumber] = useState('');
     const [dialCode, setDialCode] = useState('');
     const [phoneNumberError, setPhoneNumberError] = useState(false);
-    const [success, setSuccess] = useState(true);
+    const [success, setSuccess] = useState(false);
     const nameHandler = (e) => {
         setName(e.target.value)
 

@@ -93,5 +93,12 @@
   "success": {
     "title": "Շնորհակալություն",
     "desc": "Ձեր հարցումը հաջողությամբ կատարված է"
+  },
+  "career": {
+    "name": "Name Surname*",
+    "job": "Job position*",
+    "phone": "phone number*",
+    "email": "email*",
+    "cv": "cV*"
   }
 }

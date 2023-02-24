@@ -90,5 +90,12 @@
   "success": {
     "title": "Thank you",
     "desc": "Your request completed successfully."
+  },
+  "career": {
+    "name": "Name Surname*",
+    "job": "Job position*",
+    "phone": "phone number*",
+    "email": "email*",
+    "cv": "cV*"
   }
 }
