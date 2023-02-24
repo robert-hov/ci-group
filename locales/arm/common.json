@@ -55,7 +55,8 @@
     "primary": "Ուղարկել",
     "secondary": "Տեսնել ավելին",
     "maps": "Open on maps",
-    "back": "վերադառնալ"
+    "back": "վերադառնալ",
+    "view": "տեսնել"
   },
   "homeProjects": {
     "tsaghkadzor": "Ծաղկաձոր Հիլզ",
@@ -100,5 +101,12 @@
     "phone": "phone number*",
     "email": "email*",
     "cv": "cV*"
+  },
+  "contacts": {
+    "address": {
+      "title": "Հասցե",
+      "address": "Նաիրի Զարյան փ․ 17/1"
+    },
+    "smm" : "Սոցիալական ցանցեր"
   }
 }

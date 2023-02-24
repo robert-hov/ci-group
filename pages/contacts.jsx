@@ -3,8 +3,10 @@ import Hero from "@/components/Hero";
 import bgImg from "../public/img/hero/contact.jpg";
 import Mail from "@/components/Mail";
 import styles from "../styles/Contacts.module.scss";
+import useTranslation from "next-translate/useTranslation";
 
 const Contacts = ({lang}) => {
+    const {t} = useTranslation('common')
     return (
         <>
       <Hero other={true} bgImg={bgImg} text="hero.contacts"/>
@@ -15,18 +17,18 @@ const Contacts = ({lang}) => {
                         <div className={styles.contactCards}>
                             <div className={`${styles.contactCard} ${styles.contactCard_address}`}>
                                 <h3 className={styles.contactCardTitle}>
-                                    <span>address</span>
+                                    <span>{t('contacts.address.title')}</span>
                                     <div/>
                                 </h3>
                                 <p className={styles.contactCardText}>
-                                    ra Nairi zaryan street 17/1
+                                    {t('contacts.address.address')}
                                 </p>
                                 <p className={styles.contactCardText}>+374 95 119811</p>
                                 <p className={styles.contactCardText}>+374 95 119811</p>
                             </div>
                             <div className={`${styles.contactCard} ${styles.contactCard_smm}`}>
                                 <h3 className={styles.contactCardTitle}>
-                                    <span>Social media</span>
+                                    <span>{t('contacts.smm')}</span>
                                     <div/>
                                 </h3>
                                 <div className={styles.contactCardSmm}>

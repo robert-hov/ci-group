@@ -3,8 +3,10 @@ import FooterNav from "./Nav";
 import Smm from "./Smm";
 import styles from "./style.module.scss";
 import Link from "next/link";
+import useTranslation from "next-translate/useTranslation";
 
 const Footer = () => {
+    const {t} = useTranslation('common')
     return (
         <footer className={styles.footer}>
             <div className="page-container">
@@ -24,7 +26,7 @@ const Footer = () => {
                     </div>
                     <div className={styles.right}>
                         <span className={styles.rightText}>
-                            Nairi ZarYan st. 17/1
+                            {t('contacts.address.address')}
                         </span>
                         <a href="tel: 374-95-11-98-11" className={styles.rightText}>
                             +374 95 119811

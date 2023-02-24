@@ -55,7 +55,8 @@
     "primary": "send",
     "secondary": "see more",
     "maps": "Open on maps",
-    "back": "back"
+    "back": "back",
+    "view": "view"
   },
   "homeProjects": {
     "tsaghkadzor": "Tsaghkadzor Hills",
@@ -97,5 +98,12 @@
     "phone": "phone number*",
     "email": "email*",
     "cv": "cV*"
+  },
+  "contacts": {
+    "address": {
+      "title": "ADDRESS",
+      "address": "RA NAIRI ZARYAN STREET 17/1"
+    },
+    "smm" : "Social Media"
   }
 }
