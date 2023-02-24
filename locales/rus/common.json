@@ -58,7 +58,8 @@
   "buttons": {
     "primary": "send",
     "secondary": "see more",
-    "maps": "Open on maps"
+    "maps": "Open on maps",
+    "back": "back"
   },
   "projects": {
     "tsaghkadzor": {
@@ -77,13 +78,17 @@
       "title": "dILIJAN HILLS",
       "desc": "DILIJAN HILLS residential area offers two storey  detached houses. You can buy the apartments both  with renovated  kitchen furniture and without. Total area: 220-292 square meters",
       "about": {
-        "item1": "Outdoor swimming pool",
-        "item2": "Indoor swimming pool",
-        "item3": "Cafes",
-        "item4": "Banquet hall",
-        "item5": "number of other entertainment and luxury sites."
+        "item1": "4 bedroom",
+        "item2": "2 bathrooms",
+        "item3": "balcony",
+        "item4": "Private land",
+        "item5": "private parking"
       },
       "address": "Our address: RA, Tavush Marz, Dilijan, Shahumyan str. 17b:"
     }
+  },
+  "success": {
+    "title": "Thank you",
+    "desc": "Your request completed successfully."
   }
 }

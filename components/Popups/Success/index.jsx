@@ -1,8 +1,10 @@
 import React from 'react';
 import styles from './style.module.scss'
 import Button from "@/uiKit/Button";
+import useTranslation from "next-translate/useTranslation";
 
 const SuccessPopup = ({setOpen}) => {
+    const {t} = useTranslation('common');
     return (
         <>
             <div
@@ -14,10 +16,10 @@ const SuccessPopup = ({setOpen}) => {
                 <div className={styles.success}>
                     <div className={styles.successContent}>
                         <h3 className={`${styles.successTitle} ${styles.successTextTheme}`}>
-                            THANK YOU
+                            {t('success.title')}
                         </h3>
                         <p className={`${styles.successDesc} ${styles.successTextTheme}`}>
-                            Your request completed successfully.
+                            {t('success.desc')}
                         </p>
                         <div className={styles.successIcon}>
                             <div className="img-container">
@@ -26,7 +28,7 @@ const SuccessPopup = ({setOpen}) => {
                                 </svg>
                             </div>
                         </div>
-                        <Button color="black" text="back" click={() => setOpen(false)}/>
+                        <Button color="black" text={t('buttons.back')} click={() => setOpen(false)}/>
                     </div>
                 </div>
             </div>

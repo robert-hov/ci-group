@@ -3,7 +3,6 @@ import styles from "./style.module.scss";
 import Language from "../Language";
 import Link from "next/link";
 import useTranslation from "next-translate/useTranslation";
-import Button from "@/uiKit/Button";
 
 const Nav = ({content, direction, active, setActive}) => {
     const {t} = useTranslation('common');
@@ -13,15 +12,16 @@ const Nav = ({content, direction, active, setActive}) => {
         localTheme && setTheme(localTheme)
     }, [])
 
-    const themeChangeHandler = () => {
+    const themeChangeHandler = (theme) => {
         if (theme === 'light') {
             setTheme('dark');
-            localStorage.setItem('theme', theme)
+            localStorage.setItem('theme', 'dark')
+            document.body.setAttribute('theme', 'dark')
         } else {
             setTheme('light')
-            localStorage.setItem('theme', theme)
+            localStorage.setItem('theme', 'light')
+            document.body.setAttribute('theme', 'light')
         }
-        document.body.setAttribute('theme', theme)
     }
     return (
         <nav
@@ -46,7 +46,7 @@ const Nav = ({content, direction, active, setActive}) => {
                         );
                     })}
                 <li className={styles.item}>
-                    <button className={styles.themeButton} onClick={themeChangeHandler}>
+                    <button className={styles.themeButton} onClick={() => themeChangeHandler(theme)}>
                         {theme === 'light' ? (
                             <span className="img-container">
                                 <svg className="icon">

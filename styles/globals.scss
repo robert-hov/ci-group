@@ -38,6 +38,7 @@ html {
   --header-cream: rgba(255, 255, 255, 1);
   --header-cream-hover: rgba(255, 255, 255, 1);
   --header-fix: rgba(200, 196, 188, 1);
+  --header-links-mobile: rgba(153, 153, 153, 1);
 
   --hero-black: rgba(0, 0, 0, 1);
 
@@ -47,6 +48,7 @@ html {
   --section-text-black: rgba(0, 0, 0, 1);
 
   --service-icons: rgba(200, 196, 188, 1);
+  --service-bg: rgba(249, 249, 248, 1);
 
   --primary-font: gotham, "Helvetica Neue", sans-serif;
   --primary-font-narrow: "Gotham Narrow", sans-serif;
@@ -60,14 +62,16 @@ body[theme="dark"] {
   --header-cream: rgb(198 195 190);
   --header-cream-hover: rgba(236, 234, 230, 1);
   --header-fix: rgba(0, 0, 0, 1);
+  --header-links-mobile: rgba(0, 0, 0, 1);
 
-  --hero-black: rgba(0, 0, 0, 0.8);
+  --hero-black: rgba(0, 0, 0, 1);
 
   --section-bg-white: rgba(27, 26, 26, 1);
   --section-bg-cream: rgb(198 195 190);
   --section-text-black: rgba(255, 255, 255, 1);
 
   --service-icons: rgba(27, 26, 26, 1);
+  --service-bg: rgba(198 195 190);
 
 
   //--primary: rgba(0, 0, 0, 1);

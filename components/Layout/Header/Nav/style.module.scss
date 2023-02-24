@@ -32,7 +32,8 @@ html[lang="rus"] {
 
     padding: 9.187rem 4.375rem 2rem;
     margin-left: 0;
-    background-color: var(--primary-fifth);
+    background-color: var(--section-bg-cream);
+    transition: background-color 400ms;
 
     &_active {
       display: flex;
@@ -100,7 +101,8 @@ html[lang="rus"] {
 
   @media (max-width: $med) {
 
-    color: var(--primary-eighth);
+    color: var(--header-links-mobile);
+    transition: color 400ms;
 
     font-family: var(--primary-font);
     font-size: 1.875rem;
@@ -109,18 +111,35 @@ html[lang="rus"] {
     letter-spacing: 0.266em;
     text-decoration: none;
     text-transform: uppercase;
-    @include nav-links(var(--primary-eighth));
+    @include nav-links(var(--header-links-mobile));
 
     &_active {
       font-weight: 300;
     }
   }
 
-  @media (max-width: $med) {
+  @media (max-width: $small) {
     font-size: 1.28rem;
     line-height: 2.24;
     letter-spacing: 0.32em;
   }
+}
+
+html[lang="arm"] {
+  .link {
+    @media (max-width: 59.687rem) {
+      font-size: 0.7rem;
+    }
+    @media (max-width: $med) {
+      font-size: 1.875rem;
+
+    }
+    @media (max-width: $small) {
+      font-size: 1.28rem;
+
+    }
+  }
+
 }
 
 .link_active {
@@ -184,6 +203,12 @@ html[lang="rus"] {
     fill: var(--header-footer-white);
     width: 100%;
     height: 100%;
+  }
+
+  @media (max-width: $med) {
+    svg {
+      fill: var(--header-links-mobile);
+    }
   }
 }
 

@@ -16,23 +16,20 @@ function App({Component, pageProps}) {
 
     const [theme, setTheme] = useState('');
     useEffect(() => {
-        console.log('asadassss')
-
         const localTheme = localStorage.getItem('theme')
         if (localTheme) {
-            console.log('assss')
             setTheme(localTheme)
         } else {
             if (window.matchMedia("(prefers-color-scheme:dark)").matches) {
-                console.log('amenaxore')
-
                 setTheme('dark')
+                localStorage.setItem('theme', theme)
             } else {
                 setTheme('light')
+                localStorage.setItem('theme', theme)
             }
         }
 
-        console.log(theme)
+
         document.body.setAttribute('theme', theme)
     }, [theme])
     return (

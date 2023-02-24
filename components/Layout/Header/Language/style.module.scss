@@ -72,7 +72,7 @@
     width: 1.979rem;
 
     svg {
-      stroke: var(--primary-eighth)
+      stroke: var(--header-links-mobile)
     }
   }
 }
@@ -92,7 +92,7 @@
   text-align: start;
 
   @media (max-width: $med) {
-    color: var(--primary-eighth);
+    color: var(--header-links-mobile);
 
     font-size: 1.25rem;
     font-weight: 300;

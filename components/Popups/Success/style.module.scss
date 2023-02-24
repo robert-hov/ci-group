@@ -1,12 +1,22 @@
+@import "../../../styles/theme/variables";
+
 .success {
-
-
   padding-top: 5.125rem;
   padding-bottom: 4.062rem;
 
   background-color: var(--primary);
   width: 41.666%;
+  min-width: 28.125rem;
   cursor: default;
+
+  @media (max-width: $med) {
+    width: 70%;
+  }
+
+  @media (max-width: $small) {
+    width: 77.333%;
+    min-width: 16.875rem;
+  }
 }
 
 .successContent {
@@ -43,6 +53,10 @@
   letter-spacing: 0.25rem;
   text-transform: uppercase;
   text-align: center;
+
+  @media (max-width: $med) {
+    font-size: 1.2rem;
+  }
 }
 
 .successIcon {

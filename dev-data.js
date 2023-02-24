@@ -89,8 +89,7 @@ export const projectsData = [
                 'projects.dilijan.about.item2',
                 'projects.dilijan.about.item3',
                 'projects.dilijan.about.item4',
-                'projects.dilijan.about.item5',
-                'projects.dilijan.about.item6',
+                'projects.dilijan.about.item5'
             ],
             address: "projects.dilijan.address",
             logo: dilijanLogo,
